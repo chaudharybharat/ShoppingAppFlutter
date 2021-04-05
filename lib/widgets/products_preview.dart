@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:groceries_shopping_app/appTheme.dart';
@@ -15,7 +16,8 @@ class ProductsPreview extends StatelessWidget {
   Widget build(BuildContext context) {
     var listInfo =
         Provider.of<ProductsOperationsController>(context).productsInStock;
-    return Stack(
+    return SafeArea(
+        child: Stack(
       children: <Widget>[
         Positioned(
           top: 0,
@@ -84,7 +86,7 @@ class ProductsPreview extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: response.setWidth(20)),
                   child: Row(
                     children: <Widget>[
-                      Hero(
+                      /*          Hero(
                         tag: 'backarrow',
                         child: GestureDetector(
                           onTap: () async {
@@ -95,7 +97,7 @@ class ProductsPreview extends StatelessWidget {
                             size: response.setHeight(21),
                           ),
                         ),
-                      ),
+                      ),*/
                       Spacer(flex: 2),
                       Text(
                         "Pasta & Noodles",
@@ -118,7 +120,7 @@ class ProductsPreview extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ));
   }
 
   FutureOr<bool> _buildAlartDialog(BuildContext context) async {
