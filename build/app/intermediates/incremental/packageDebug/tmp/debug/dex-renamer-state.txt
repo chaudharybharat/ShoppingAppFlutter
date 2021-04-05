@@ -1,0 +1,4 @@
+#Mon Apr 05 09:59:26 IST 2021
+base.0=/home/harsh/Downloads/groceries-shopping-flutter-app-master/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
