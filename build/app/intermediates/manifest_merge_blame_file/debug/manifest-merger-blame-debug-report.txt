@@ -12,61 +12,67 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/debug/AndroidManifest.xml:6:22-64
-15    <!--
-16     io.flutter.app.FlutterApplication is an android.app.Application that
-17         calls FlutterMain.startInitialization(this); in its onCreate method.
-18         In most cases you can leave this as-is, but you if you want to provide
-19         additional functionality it is fine to subclass or reimplement
-20         FlutterApplication and put your custom class here.
-21    -->
-22    <application
-22-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:8:5-29:19
-23        android:name="io.flutter.app.FlutterApplication"
-23-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:9:9-57
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.1.0] /home/harsh/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:18-86
-25        android:debuggable="true"
-26        android:icon="@mipmap/launcher_icon"
-26-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:11:9-45
-27        android:label="Groceries Shopping" >
-27-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:10:9-43
-28        <activity
-28-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:12:9-23:20
-29            android:name="com.example.groceries_shopping_app.MainActivity"
-29-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:13:13-41
-30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-30-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:16:13-163
-31            android:hardwareAccelerated="true"
-31-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:17:13-47
-32            android:launchMode="singleTop"
-32-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:14:13-43
-33            android:theme="@style/LaunchTheme"
-33-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:15:13-47
-34            android:windowSoftInputMode="adjustResize" >
-34-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:18:13-55
-35            <intent-filter>
-35-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:19:13-22:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:20:17-68
-36-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:20:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:21:17-76
-38-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:21:27-74
-39            </intent-filter>
-40        </activity>
-41        <!--
-42             Don't delete the meta-data below.
-43             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-44        -->
-45        <meta-data
-45-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:26:9-28:33
-46            android:name="flutterEmbedding"
-46-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:27:13-44
-47            android:value="2" />
-47-->/home/harsh/Downloads/groceries-shopping-flutter-app-master/android/app/src/main/AndroidManifest.xml:28:13-30
-48    </application>
-49
-50</manifest>
+14-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/debug/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[:connectivity] /home/harsh/Documents/GitProject/ShoppingAppFlutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+15-->[:connectivity] /home/harsh/Documents/GitProject/ShoppingAppFlutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-76
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->[:connectivity] /home/harsh/Documents/GitProject/ShoppingAppFlutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-76
+16-->[:connectivity] /home/harsh/Documents/GitProject/ShoppingAppFlutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-73
+17    <!--
+18 io.flutter.app.FlutterApplication is an android.app.Application that
+19         calls FlutterMain.startInitialization(this); in its onCreate method.
+20         In most cases you can leave this as-is, but you if you want to provide
+21         additional functionality it is fine to subclass or reimplement
+22         FlutterApplication and put your custom class here.
+23    -->
+24    <application
+24-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:8:5-29:19
+25        android:name="io.flutter.app.FlutterApplication"
+25-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:9:9-57
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.1.0] /home/harsh/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/launcher_icon"
+28-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:11:9-45
+29        android:label="Groceries Shopping" >
+29-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:10:9-43
+30        <activity
+30-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:12:9-23:20
+31            android:name="com.example.groceries_shopping_app.MainActivity"
+31-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:13:13-41
+32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+32-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:16:13-163
+33            android:hardwareAccelerated="true"
+33-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:17:13-47
+34            android:launchMode="singleTop"
+34-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:14:13-43
+35            android:theme="@style/LaunchTheme"
+35-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:15:13-47
+36            android:windowSoftInputMode="adjustResize" >
+36-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:18:13-55
+37            <intent-filter>
+37-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:19:13-22:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:20:17-68
+38-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:20:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:21:17-76
+40-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:21:27-74
+41            </intent-filter>
+42        </activity>
+43        <!--
+44             Don't delete the meta-data below.
+45             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+46        -->
+47        <meta-data
+47-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:26:9-28:33
+48            android:name="flutterEmbedding"
+48-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:27:13-44
+49            android:value="2" />
+49-->/home/harsh/Documents/GitProject/ShoppingAppFlutter/android/app/src/main/AndroidManifest.xml:28:13-30
+50    </application>
+51
+52</manifest>

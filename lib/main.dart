@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:groceries_shopping_app/product_provider.dart';
 import 'package:groceries_shopping_app/screens/home.dart';
 import 'package:groceries_shopping_app/screens/login_screen.dart';
+import 'package:groceries_shopping_app/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:response/response.dart';
 import 'local_database.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       child: Response(
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: LoginScreen(),
+          home: SplashScreen(),
         ),
       ),
       create: (BuildContext context) => ProductsOperationsController(),

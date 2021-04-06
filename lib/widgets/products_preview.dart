@@ -6,8 +6,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:groceries_shopping_app/appTheme.dart';
 import 'package:groceries_shopping_app/product_provider.dart';
 import 'package:groceries_shopping_app/screens/home.dart';
+import 'package:groceries_shopping_app/screens/login_screen.dart';
 import 'package:groceries_shopping_app/widgets/product_card.dart';
 import 'package:provider/provider.dart';
+
+import '../app_preferences.dart';
 
 class ProductsPreview extends StatelessWidget {
   ProductsPreview({this.opacityAnimation});
@@ -128,7 +131,7 @@ class ProductsPreview extends StatelessWidget {
       context: context,
       builder: (_) => PlatformAlertDialog(
         title: Text(
-          'Info',
+          'Logout',
           style: TextStyle(
             color: Colors.blue,
             fontWeight: FontWeight.bold,
@@ -136,12 +139,24 @@ class ProductsPreview extends StatelessWidget {
         ),
         content: Padding(
           padding: EdgeInsets.only(top: 10),
-          child: Text("This feature will be implemented soon, stay tuned."),
+          child: Text("do you want to logout?"),
         ),
         actions: <Widget>[
           PlatformDialogAction(
-            child: PlatformText('OK'),
+            child: PlatformText('Cancel'),
             onPressed: () => Navigator.of(context).pop(true),
+          ),
+          PlatformDialogAction(
+            child: PlatformText('OK'),
+            onPressed: () {
+              AppPreferences _appPreferences = AppPreferences();
+              _appPreferences.setLoggedIn(isLoggedIn: false);
+
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  (r) => false);
+            },
           ),
         ],
       ),

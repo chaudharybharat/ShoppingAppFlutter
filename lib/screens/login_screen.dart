@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_shopping_app/Animation/FadeAnimation.dart';
+import 'package:groceries_shopping_app/common_method.dart';
 import 'package:groceries_shopping_app/screens/home.dart';
+import 'package:groceries_shopping_app/validation.dart';
 import 'package:groceries_shopping_app/widgets/details_page_transition.dart';
 import 'package:groceries_shopping_app/widgets/home_page_transition.dart';
+
+import '../app_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key key}) : super(key: key);
@@ -12,6 +16,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
+  TextEditingController usereEmailController = new TextEditingController();
+  TextEditingController userePassController = new TextEditingController();
+  AppPreferences _appPreferences = AppPreferences();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,6 +97,7 @@ class LoginScreenState extends State<LoginScreen> {
                                             bottom: BorderSide(
                                                 color: Colors.grey[200]))),
                                     child: TextField(
+                                      controller: usereEmailController,
                                       decoration: InputDecoration(
                                           hintText: "Email or Phone number",
                                           hintStyle:
@@ -103,6 +112,7 @@ class LoginScreenState extends State<LoginScreen> {
                                             bottom: BorderSide(
                                                 color: Colors.grey[200]))),
                                     child: TextField(
+                                      controller: userePassController,
                                       decoration: InputDecoration(
                                           hintText: "Password",
                                           hintStyle:
@@ -129,14 +139,22 @@ class LoginScreenState extends State<LoginScreen> {
                             1.6,
                             GestureDetector(
                                 onTap: () {
-                                  Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          HomeScreen(),
-                                    ),
-                                    (route) => false,
-                                  );
+                                  String email =
+                                      usereEmailController.text.trim();
+                                  String pass = userePassController.text.trim();
+                                  var isValid = checkValidation(email, pass);
+                                  if (isValid) {
+                                    _appPreferences.setLoggedIn(
+                                        isLoggedIn: true);
+                                    Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            HomeScreen(),
+                                      ),
+                                      (route) => false,
+                                    );
+                                  }
                                 },
                                 child: Container(
                                   height: 50,
@@ -218,5 +236,21 @@ class LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  bool checkValidation(String email, String pass) {
+    if (!Validation.isRequired(email)) {
+      CommonMethod.toastMessage("Please enter email");
+      return false;
+    }
+    if (!Validation.isValidEmail(email)) {
+      CommonMethod.toastMessage("Please enter valid email");
+      return false;
+    }
+    if (!Validation.isRequired(pass)) {
+      CommonMethod.toastMessage("Please enter password");
+      return false;
+    }
+    return true;
   }
 }
